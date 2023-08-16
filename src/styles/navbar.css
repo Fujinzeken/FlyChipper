@@ -9,18 +9,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 60%;
 }
 
 .nav__left-left {
   display: flex;
   gap: 20px;
   font-size: 0.9rem;
-}
-
-.logo {
-  width: 15%;
-  object-fit: contain;
 }
 
 .nav__right {
@@ -31,10 +26,16 @@
 .login__btn {
   background: transparent;
   color: #fff;
-  border: none;
+  border: 1px solid grey;
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
+  border-radius: 5px;
+  padding: 7px 15px;
+}
+
+.login__btn:hover {
+  background: #000000;
 }
 
 .signup__btn {
@@ -46,4 +47,15 @@
   font-weight: 500;
   border: none;
   cursor: pointer;
+}
+
+.signup__btn:hover {
+  background: red;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .nav__left-left {
+    display: none;
+  }
 }

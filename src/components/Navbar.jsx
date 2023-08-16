@@ -10,7 +10,9 @@ const Navbar = () => {
           <span>Find Flight</span>
           <span>Find stay</span>
         </div>
-        <img className="logo" src={logo} alt="" />
+        <h2 className="logo">
+          Fly<span style={{ color: "red" }}>₡</span>heaper
+        </h2>
       </div>
       <div className="nav__right">
         <button className="login__btn">Login</button>

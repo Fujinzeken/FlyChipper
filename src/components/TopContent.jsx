@@ -8,9 +8,11 @@ const TopContent = () => {
     <section className="topContainer">
       <Navbar />
       <div className="text__wrapper">
-        <h3>Helping Others</h3>
-        <h2>Live & Travel</h2>
-        <p>Special offers to suit your plan</p>
+        <h3>Wanna Travel?</h3>
+        <br></br>
+        <h2>And on a budget?</h2>
+        <p>Find Unbelievably affordable flights at </p>
+        <h2 style={{ color: "red" }}>FlyCheaper</h2>
       </div>
       <FlightForm />
     </section>

@@ -116,19 +116,27 @@ const FlightForm = () => {
               <form onSubmit={handleSubmit}>
                 <div className="form__wrapper">
                   <div className="form__div">
-                    <label>From</label>
+                    <label>
+                      From<span style={{ color: "red" }}>*</span>
+                    </label>
                     <input type="text" placeholder="Flying From...." />
                   </div>
                   <div className="form__div">
-                    <label>To</label>
+                    <label>
+                      To<span style={{ color: "red" }}>*</span>
+                    </label>
                     <input type="text" placeholder="Flying To...." />
                   </div>
                   <div className="form__div">
-                    <label>Date From</label>
+                    <label>
+                      Date From<span style={{ color: "red" }}>*</span>
+                    </label>
                     <input type="date" placeholder="dd-mm-yyyy" />
                   </div>
                   <div className="form__div">
-                    <label>Date To</label>
+                    <label>
+                      Date To<span style={{ color: "red" }}>*</span>
+                    </label>
                     <input type="date" placeholder="dd-mm-yyyy" />
                   </div>
                   <div className="form__div">
