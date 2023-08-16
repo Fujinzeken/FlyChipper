@@ -1,0 +1,42 @@
+.topContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),
+    url("../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.text__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10%;
+}
+
+h3,
+h2,
+p {
+  margin: 10px;
+}
+h3 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 25px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}

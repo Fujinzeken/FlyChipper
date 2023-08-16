@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.nav__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.nav__left-left {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.logo {
+  width: 15%;
+  object-fit: contain;
+}
+
+.nav__right {
+  display: flex;
+  gap: 20px;
+}
+
+.login__btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.signup__btn {
+  background: #fff;
+  border-radius: 5px;
+  padding: 7px 15px;
+  color: #000000;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}

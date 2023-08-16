@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import axios from "axios";
+import { useState } from "react";
+// import { useEffect } from "react";
+import TopContent from "./components/TopContent";
+
+// const endpoint = "https://api.tequila.kiwi.com/locations/query";
+// const apikey = "BGuaC80rRDCbk-POVcsIe7UPIk41Ja9M";
 
 function App() {
+  const [response, setResponse] = useState("");
+  // useEffect(() => {
+  //   const res = async () => {
+  //     try {
+  //       const result = await axios.get(
+  //         `${endpoint}?term=LAG&locale=en-US&location_types=airport&limit=10&active_only=true`,
+  //         {
+  //           headers: {
+  //             apikey: apikey,
+  //           },
+  //         }
+  //       );
+  //       setResponse(result.data);
+  //       console.log(result.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   res();
+  // }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopContent />
+      {console.log(response)}
     </div>
   );
 }
