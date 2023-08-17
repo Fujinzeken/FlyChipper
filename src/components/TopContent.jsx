@@ -11,7 +11,7 @@ const TopContent = () => {
         <h3>Wanna Travel?</h3>
         <h2>And on a budget?</h2>
         <p>Find Unbelievably affordable flights at </p>
-        <h2 style={{ color: "red" }}>FlyCheaper</h2>
+        <h2 style={{ color: "red" }}>Fly₡heaper</h2>
       </div>
       <FlightForm />
     </section>
