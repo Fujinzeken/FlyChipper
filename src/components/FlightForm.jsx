@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/flightForm.css";
 import FlightTable from "./FlightTable";
 import { Col, Container, Row } from "reactstrap";
