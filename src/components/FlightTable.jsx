@@ -27,7 +27,7 @@ const FlightTable = ({ data, setShowTable }) => {
           X
         </span>
         <Row>
-          <Col lg="12">
+          <Col>
             <table className="table table-bordered">
               <thead>
                 <tr>

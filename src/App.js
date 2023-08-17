@@ -49,7 +49,7 @@ function ProviderRoutes() {
 }
 
 function App() {
-  document.title = "FlyCheaper - Unbielievably affordable air travel";
+  document.title = "Fly₡heaper - Unbielievably affordable air travel";
   return (
     <div>
       <Router>

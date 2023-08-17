@@ -64,4 +64,8 @@ thead {
   td {
     font-size: 14px;
   }
+
+  .table__wrapper {
+    margin: 50px !important;
+  }
 }
