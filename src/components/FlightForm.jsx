@@ -1,9 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/flightForm.css";
 import FlightTable from "./FlightTable";
 import { Col, Container, Row } from "reactstrap";
 import Loader from "./loader";
+import { ToastContainer, toast } from "react-toastify";
 
 const locationEndpoint = "https://api.tequila.kiwi.com/locations/query";
 const searchEndpoint = "https://api.tequila.kiwi.com/v2/search";
@@ -15,9 +16,17 @@ const FlightForm = () => {
   const [showTable, setShowTable] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const toastOptions = {
+    position: "top-right",
+    autoClose: 8000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "dark",
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+
     const dateFrom = e.target[2].value.split("-");
     const dateTo = e.target[3].value.split("-");
 
@@ -35,6 +44,28 @@ const FlightForm = () => {
     const newDateFrom = dateFrom.join("-").replace(/-/g, "/");
     const newDateTo = dateTo.join("-").replace(/-/g, "/");
     console.log(newDateFrom, newDateTo);
+
+    if (e.target[0].value.length < 2) {
+      toast.error(
+        "Please enter a from location in the from input box",
+        toastOptions
+      );
+      return;
+    } else if (e.target[1].value.length < 2) {
+      toast.error(
+        "Please enter a destination in the to input box",
+        toastOptions
+      );
+      return;
+    } else if (e.target[2].value.length < 2) {
+      toast.error("Please enter a date from", toastOptions);
+      return;
+    } else if (e.target[3].value.length < 2) {
+      toast.error("Please enter a date to", toastOptions);
+      return;
+    }
+
+    setLoading(true);
     const params = {
       locale: "en-US",
       loaction_types: "airport",
@@ -84,6 +115,10 @@ const FlightForm = () => {
         const data = search.data.data.filter((data) => budget >= data.price);
         setLoading(false);
         setSearchData(data);
+        setShowTable(true);
+      } else {
+        setLoading(false);
+        setSearchData(search.data.data);
         setShowTable(true);
       }
 
@@ -156,6 +191,7 @@ const FlightForm = () => {
           {loading && <Loader />}
         </Col>
       </Row>
+      <ToastContainer />
     </Container>
   );
 };

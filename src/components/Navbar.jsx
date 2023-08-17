@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/navbar.css";
-import logo from "../assets/images/Logo.png";
+import { SignOutButton, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
   return (
@@ -15,8 +15,10 @@ const Navbar = () => {
         </h2>
       </div>
       <div className="nav__right">
-        <button className="login__btn">Login</button>
-        <button className="signup__btn">Sign Up</button>
+        <SignOutButton>
+          <button className="signup__btn">Log out</button>
+        </SignOutButton>
+        <UserButton />
       </div>
     </nav>
   );

@@ -1,38 +1,59 @@
 import "./App.css";
-// import axios from "axios";
-import { useState } from "react";
-// import { useEffect } from "react";
+import SignInPage from "./components/SignIn";
+import SignUpPage from "./components/SignUp";
 import TopContent from "./components/TopContent";
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/clerk-react";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 
-// const endpoint = "https://api.tequila.kiwi.com/locations/query";
-// const apikey = "BGuaC80rRDCbk-POVcsIe7UPIk41Ja9M";
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+
+function ProviderRoutes() {
+  const navigate = useNavigate();
+  return (
+    <ClerkProvider publishableKey={clerkPubKey} navigate={(to) => navigate(to)}>
+      <Routes>
+        <Route
+          path="/sign-in/*"
+          element={<SignInPage routing="path" path="/sign-in" />}
+        />
+        <Route
+          path="/sign-up/*"
+          element={<SignUpPage routing="path" path="/sign-up" />}
+        />
+        <Route
+          path="/"
+          element={
+            <>
+              <SignedIn>
+                <TopContent />
+              </SignedIn>
+              <SignedOut>
+                <RedirectToSignIn />
+              </SignedOut>
+            </>
+          }
+        />
+      </Routes>
+    </ClerkProvider>
+  );
+}
 
 function App() {
-  const [response, setResponse] = useState("");
-  // useEffect(() => {
-  //   const res = async () => {
-  //     try {
-  //       const result = await axios.get(
-  //         `${endpoint}?term=LAG&locale=en-US&location_types=airport&limit=10&active_only=true`,
-  //         {
-  //           headers: {
-  //             apikey: apikey,
-  //           },
-  //         }
-  //       );
-  //       setResponse(result.data);
-  //       console.log(result.data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   res();
-  // }, []);
-
   return (
-    <div className="App">
-      <TopContent />
-      {console.log(response)}
+    <div>
+      <Router>
+        <ProviderRoutes />
+      </Router>
     </div>
   );
 }
