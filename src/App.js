@@ -49,6 +49,7 @@ function ProviderRoutes() {
 }
 
 function App() {
+  document.title = "FlyCheaper - Unbielievably affordable air travel";
   return (
     <div>
       <Router>
