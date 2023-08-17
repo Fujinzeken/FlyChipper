@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "flycheaper.png",
+      "src": "logo192.png",
       "type": "image/png",
-      "sizes": "190x127"
+      "sizes": "192x192"
     },
     {
-      "src": "flycheaper.png",
+      "src": "logo512.png",
       "type": "image/png",
-      "sizes": "190x127"
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
