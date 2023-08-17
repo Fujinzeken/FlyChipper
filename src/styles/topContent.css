@@ -41,3 +41,9 @@ p {
   line-height: 20px;
   letter-spacing: 2px;
 }
+
+@media (max-width: 568px) {
+  .text__wrapper {
+    color: #fff;
+  }
+}
