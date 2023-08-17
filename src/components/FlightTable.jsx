@@ -33,8 +33,8 @@ const FlightTable = ({ data, setShowTable }) => {
                 <tr>
                   <th>From</th>
                   <th>To</th>
-                  <th>price</th>
-                  <th>avaialable seats</th>
+                  <th>Price</th>
+                  <th>Avaialable seats</th>
                   <th>Departure Date</th>
                   <th>Arrival Date</th>
                 </tr>
