@@ -13,7 +13,6 @@
 
 .table__wrapper {
   background: #ff0000;
-  width: 80vw;
   border-radius: 10px;
   padding: 2rem 1rem;
   text-align: center;
@@ -34,6 +33,7 @@ thead {
   list-style: none;
   margin: auto;
   margin-top: 20px;
+  margin-right: 20px;
 }
 
 .paginationBtns a {
@@ -67,5 +67,6 @@ thead {
 
   .table__wrapper {
     margin: 50px !important;
+    width: 93% !important;
   }
 }
