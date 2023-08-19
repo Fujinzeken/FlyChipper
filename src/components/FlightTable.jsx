@@ -1,6 +1,6 @@
 import ReactPaginate from "react-paginate";
 import "../styles/flightTable.css";
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 import { useState } from "react";
 const FlightTable = ({ data, setShowTable }) => {
   const [pageNum, setPageNum] = useState(0);
