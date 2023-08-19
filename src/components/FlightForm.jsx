@@ -184,13 +184,13 @@ const FlightForm = () => {
                 </div>
               </form>
             </div>
-            {showTable && (
-              <FlightTable data={searchData} setShowTable={setShowTable} />
-            )}
           </div>
           {loading && <Loader />}
         </Col>
       </Row>
+      {showTable && (
+        <FlightTable data={searchData} setShowTable={setShowTable} />
+      )}
       <ToastContainer />
     </Container>
   );

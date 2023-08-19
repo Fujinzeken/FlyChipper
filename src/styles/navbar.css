@@ -65,4 +65,22 @@
   .nav__left-left {
     display: none;
   }
+
+  .logo {
+    background-color: #fff;
+    opacity: 0.4;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__left-left {
+    display: none;
+  }
+
+  .logo {
+    background-color: #fff;
+    opacity: 0.4;
+    letter-spacing: 2px;
+  }
 }
