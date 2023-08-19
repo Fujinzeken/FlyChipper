@@ -35,7 +35,7 @@ const FlightTable = ({ data, setShowTable }) => {
                 <th>From</th>
                 <th>To</th>
                 <th>Price</th>
-                <th>seats</th>
+                <th>Available seats</th>
                 <th>Departure Date</th>
                 <th>Arrival Date</th>
               </tr>
@@ -70,7 +70,7 @@ const FlightTable = ({ data, setShowTable }) => {
           </table>
         </div>
 
-        <div>
+        <div className="d-flex w-100">
           <ReactPaginate
             pageCount={pageCount}
             onPageChange={changePage}
