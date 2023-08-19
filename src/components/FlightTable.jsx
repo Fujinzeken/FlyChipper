@@ -70,7 +70,7 @@ const FlightTable = ({ data, setShowTable }) => {
           </table>
         </div>
 
-        <div className="d-flex w-100">
+        <div className="d-flex align-items-center justify-content-center">
           <ReactPaginate
             pageCount={pageCount}
             onPageChange={changePage}
